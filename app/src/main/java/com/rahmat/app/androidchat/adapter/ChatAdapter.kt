@@ -12,7 +12,7 @@ import com.rahmat.app.androidchat.entity.ChatMessage
 /**
  * Created by muhrahmatullah on 09/10/18.
  */
-class ChatAdapter(options: FirebaseRecyclerOptions<ChatMessage>, val user: String?)
+class ChatAdapter(options: FirebaseRecyclerOptions<ChatMessage>)
     : FirebaseRecyclerAdapter<ChatMessage, ChatViewHolder>(options) {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ChatViewHolder {
@@ -20,7 +20,7 @@ class ChatAdapter(options: FirebaseRecyclerOptions<ChatMessage>, val user: Strin
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int, model: ChatMessage) {
-        if (model.user == user) {
+        if (model.user == "user") {
             holder.userText.text = model.chat
             holder.userText.visibility = View.VISIBLE
             holder.botText.visibility = View.GONE

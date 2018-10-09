@@ -49,10 +49,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         }
 
         val options = FirebaseRecyclerOptions.Builder<ChatMessage>()
-                .setQuery(ref.child("chat").child(user!!), ChatMessage::class.java)
+                .setQuery(ref.child("chat"), ChatMessage::class.java)
                 .build()
 
-        adapter = ChatAdapter(options, user)
+        adapter = ChatAdapter(options)
 
         rvChat.adapter = adapter
 
@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
                 if (lastVisiblePosition == -1 || positionStart >= msgCount - 1 && lastVisiblePosition == positionStart - 1) {
                     rvChat.scrollToPosition(positionStart)
                 }
-
             }
         })
 
