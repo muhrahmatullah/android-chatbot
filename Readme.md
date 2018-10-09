@@ -1,7 +1,8 @@
 # Android Chat
 
 
-This application demonstrated use of Room persistence storage with create, read, update and delete operation. find the post about this repo at this link  https://medium.com/@muh.rahmatullah/add-chatbot-to-your-android-app-524556c058ab
+This application demonstrated use of Dialog flow as a chatbot engine in android application and also the use of firebase db as a backend.
+find the post about this repo at this link  https://medium.com/@muh.rahmatullah/add-chatbot-to-your-android-app-524556c058ab
 
 ## Screenshots
 
