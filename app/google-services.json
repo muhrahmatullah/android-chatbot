@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "524304109104",
+    "firebase_url": "https://small-talk-2753e.firebaseio.com",
+    "project_id": "small-talk-2753e",
+    "storage_bucket": "small-talk-2753e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524304109104:android:5b575aea86f017fe",
+        "android_client_info": {
+          "package_name": "com.rahmat.app.androidchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524304109104-6efdpag3k85k47c8vfjtut2ucvpkuuuf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahmat.app.androidchat",
+            "certificate_hash": "53221c66491aab985ba9b3605ddb29973a876b04"
+          }
+        },
+        {
+          "client_id": "524304109104-cccgcr19ut6l35fubk4034beeonc28o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChfSOdUWBOExqnWpa6ukZJU97g-hObfAk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524304109104-cccgcr19ut6l35fubk4034beeonc28o3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
