@@ -92,5 +92,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         ref = FirebaseDatabase.getInstance().reference
 
         mPresenter = MainPresenter(aiDataAIService, ref)
+
     }
 }
