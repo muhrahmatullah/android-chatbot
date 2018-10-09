@@ -6,6 +6,7 @@ This application demonstrated use of Room persistence storage with create, read,
 ## Screenshots
 
 
+
 ### Tech stack
 * [x] Kotlin
 * [x] Dialogflow
