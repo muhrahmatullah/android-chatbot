@@ -5,7 +5,8 @@ This application demonstrated use of Room persistence storage with create, read,
 
 ## Screenshots
 
-
+<img src="https://github.com/muhrahmatullah/android-chatbot/blob/master/screenshots/chat.png"
+width="256">&nbsp;&nbsp;&nbsp;
 
 ### Tech stack
 * [x] Kotlin
