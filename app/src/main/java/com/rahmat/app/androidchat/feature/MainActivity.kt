@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     override fun onStop() {
         super.onStop()
         adapter.stopListening()
+        mPresenter.onDestroy()
     }
 
     fun initPresenter(){

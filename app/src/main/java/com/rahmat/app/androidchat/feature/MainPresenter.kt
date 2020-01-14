@@ -19,30 +19,33 @@ class MainPresenter(val aiDataAIService: AIDataService,
 
     val job = Job()
 
+    private val coroutineScope = CoroutineScope(Dispatchers.IO + job)
+
     override fun sendMessage(message: String) {
         val chatMessage = ChatMessage(message, "user")
         ref.child("chat").push().setValue(chatMessage)
         aiRequest.setQuery(message)
 
 
-
-//        async(UI) {
-//            val response = bg {
-//                aiDataAIService.request(aiRequest)
-//            }
-//            if (response.await() != null) {
-//                sendMessageToServer(response.await())
-//            }else{
-//                Log.v("test", "didn't send")
-//            }
-//        }
-    }
-    private suspend fun sendMessageToServer(response: AIResponse?) {
-        withContext(Dispatchers.IO) {
-            val result = response?.result
-            val reply = result?.fulfillment?.speech
-            val chatMessage = ChatMessage(reply, "bot")
-            ref.child("chat").push().setValue(chatMessage)
+        val response: Deferred<AIResponse>? = coroutineScope.async {
+            aiDataAIService.request(aiRequest)
         }
+
+        coroutineScope.launch {
+            sendMessageToServer(response?.await())
+        }
+
+    }
+
+    private fun sendMessageToServer(response: AIResponse?) {
+        val result = response?.result
+        val reply = result?.fulfillment?.speech
+        val chatMessage = ChatMessage(reply, "bot")
+        ref.child("chat").push().setValue(chatMessage)
+
+    }
+
+    override fun onDestroy() {
+        job.cancel()
     }
 }
