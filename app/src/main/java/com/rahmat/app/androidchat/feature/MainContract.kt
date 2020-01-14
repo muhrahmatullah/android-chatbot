@@ -11,6 +11,7 @@ interface MainContract {
 
     interface Presenter{
         fun sendMessage(message: String)
+        fun onDestroy()
     }
 
 }
