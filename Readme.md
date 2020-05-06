@@ -1,5 +1,7 @@
 # Android Chat
 
+## Note
+In order to run this app in your local, you need to provide your own **google-service.json** and **DIALOGFLOW-CLIENT-ACCESS-KEY**
 
 This application demonstrated use of Dialog flow as a chatbot engine in android application and also the use of firebase db as a backend.
 find the post about this repo at this link  https://medium.com/@muh.rahmatullah/add-chatbot-to-your-android-app-524556c058ab
